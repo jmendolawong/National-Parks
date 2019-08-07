@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <!--metadata - include charset, name/content, title-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>National Parks API</title>
+
+        <!--link stylesheets and jquery -->
+        <link rel="stylesheet" href="index.css">  
+        <script src="https://code.jquery.com/jquery-3.3.1.js" 
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>National Parks</h1>
+
+            <form id="js-form">
+                <div class="search">
+                <label for="search-user">Search for national parks by states, separated by commas! (Use state codes. i.e. Iowa = IA)</label>
+                <input type="text" name="search-state" id="search-state" required>
+                </div>
+                <div class="search">
+                <label for="max-results">Maximum results to return</label>
+                <input type="number" name="max-results" id="max-results" value="10">
+                </div>
+
+                <input type="submit" value="Search!">
+            </form>
+        </div>
+
+        <p id="js-error" class="error-message"></p>
+        <section id="results" class="hidden">
+            <h2>Search Results</h2>
+            <ol id="results-list"></ol>
+        </section>
+
+        <script src="index.js"></script>
+    </body>
+
+</html>
