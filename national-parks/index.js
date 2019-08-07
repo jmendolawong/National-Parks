@@ -23,7 +23,7 @@ If second query, clear the first results to display only the second results, ite
 */
 function displayResults(results){
     $('#results-list').empty();
-
+ 
     //for each item in the array, extract name and url and format via html
     for(let i=0; i<results.limit; i++){
         $('#results-list').append(
